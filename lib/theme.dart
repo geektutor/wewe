@@ -1,25 +1,37 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme = ThemeData.light();
+Color geekColor = Color(0xFFFFFFFF);
+Color geekBlackColor = Color(0xFF00C35E);
 
-ThemeData darkTheme = ThemeData.dark();
+ThemeData lightTheme = ThemeData.light();
+ThemeData darkThemeReal = ThemeData.dark();
+
+ThemeData darkTheme = darkThemeReal.copyWith(
+  buttonColor: geekBlackColor,
+);
 
 ThemeData lighterTheme = lightTheme.copyWith(
   primaryColor: Color(0xFFF1F1F1),
+  primaryIconTheme: IconThemeData(
+    color: Colors.black,
+  ),
+  canvasColor: Color(0xFF00C35E),
+  buttonColor: geekColor,
 );
 
 ThemeData pinkTheme = lightTheme.copyWith(
-    primaryColor: Color(0xFFF1F1F1),
-    scaffoldBackgroundColor: Color(0xFFFAF8F0),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      foregroundColor: Color(0xFF24737c),
-      backgroundColor: Color(0xFFA6E0DE),
+  primaryColor: Color(0xFFF1F1F1),
+  scaffoldBackgroundColor: Color(0xFFFAF8F0),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    foregroundColor: Color(0xFF24737c),
+    backgroundColor: Color(0xFFA6E0DE),
+  ),
+  textTheme: TextTheme(
+    body1: TextStyle(
+      color: Colors.black87,
     ),
-    textTheme: TextTheme(
-      body1: TextStyle(
-        color: Colors.black87,
-      ),
-    ));
+  ),
+);
 
 ThemeData halloweenTheme = lightTheme.copyWith(
   primaryColor: Color(0xFF55705A),
