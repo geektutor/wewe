@@ -1,4 +1,4 @@
-[
+{   "facts": [
     "The wind doesn’t make a sound until it blows against an object",
     "For each minute of the day, 1 billion tonnes of rain falls on the Earth",
     "A molecule of water will stay in the Earth’s atmosphere for an average duration of 10-12 days",
@@ -46,3 +46,4 @@
     "Rainfall amount can be predicted from types of cloud",
     "Not all raindrops are made of water"
 ]
+}
