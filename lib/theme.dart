@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Color geekColor = Color(0xFFFFFFFF);
 Color geekBlackColor = Color(0xFF00C35E);
 
 ThemeData lightTheme = ThemeData.light();
 ThemeData darkThemeReal = ThemeData.dark();
+TextTheme _textTheme = TextTheme(
+    bodyText1: GoogleFonts.nunito(
+        textStyle: TextStyle(
+  fontSize: 22,
+)));
 
 ThemeData darkTheme = darkThemeReal.copyWith(
-  buttonColor: geekBlackColor,
-);
+    buttonColor: geekBlackColor,
+    primaryIconTheme: IconThemeData(
+      color: Colors.white,
+    ),
+    textTheme: TextTheme(
+        bodyText1: _textTheme.bodyText1.copyWith(color: Colors.white)));
 
 ThemeData lighterTheme = lightTheme.copyWith(
-  primaryColor: Color(0xFFF1F1F1),
-  primaryIconTheme: IconThemeData(
-    color: Colors.black,
-  ),
-  canvasColor: Color(0xFF00C35E),
-  buttonColor: geekColor,
-);
+    primaryColor: Color(0xFFF1F1F1),
+    primaryIconTheme: IconThemeData(
+      color: Colors.black,
+    ),
+    canvasColor: Color(0xFF00C35E),
+    buttonColor: geekColor,
+    textTheme: TextTheme(
+        bodyText1: _textTheme.bodyText1.copyWith(color: Colors.black)));
 
 ThemeData pinkTheme = lightTheme.copyWith(
   primaryColor: Color(0xFFF1F1F1),

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'appbar.dart';
+import 'package:wewe/widgets/appbar.dart';
+import 'home.dart';
 import 'theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 
 class MyApp extends StatelessWidget {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
       child: Builder(builder: (context) {
         return MaterialApp(
           theme: ThemeProvider.of(context),
+          
           home: HomePage(),
         );
       }),
@@ -31,6 +34,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return AppBarTop();
+    return AppBarTop(
+      child: MyHomePage(),
+    );
   }
 }
