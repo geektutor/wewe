@@ -2,11 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
-import 'dart:async';
-import 'appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'theme.dart';
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+
 
 class MyHomePage extends StatefulWidget {
   @override
